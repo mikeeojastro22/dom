@@ -55,3 +55,30 @@ orange.classList.add("orange");
 
 let target2 = document.getElementById("target2");
 target2.classList.remove("orange");
+
+// adds class red to firsth2 element
+document.getElementById("firsth2").classList.toggle("red");
+
+// removes class red from secondh2 element
+document.getElementById("secondh2").classList.toggle("red");
+
+const league = document.getElementById("league");
+
+const superHeroes = [
+    "Batman",
+    "Superman",
+    "Wonder Woman",
+    "The Flash"
+];
+
+// createElement
+for(let i = 0; i < superHeroes.length; i++){
+    let newElement = document.createElement("li");
+    newElement.textContent = superHeroes[i];
+    league.appendChild(newElement);
+}
+
+// innerHTML
+for(let i = 0; i < superHeroes.length; i++){
+    league.innerHTML += `<li>${superHeroes[i]}</li>`;
+}
